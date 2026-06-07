@@ -2,6 +2,8 @@
 #include "../include/canvas.h"
 #include "../include/line.h"
 #include "../include/rectangle.h"
+#include "../include/triangle.h"
+#include "../include/circle.h"
 
 int main()
 {
@@ -15,9 +17,11 @@ int main()
         printf("===== 2D GRAPHICS EDITOR =====\n");
         printf("1. Draw Line\n");
         printf("2. Draw Rectangle\n");
-        printf("3. Display Canvas\n");
-        printf("4. Clear Canvas\n");
-        printf("5. Exit\n");
+        printf("3. Draw Triangle\n");
+        printf("4. Draw Circle\n");
+        printf("5. Display Canvas\n");
+        printf("6. Clear Canvas\n");
+        printf("7. Exit\n");
         printf("Enter Choice : ");
         scanf("%d",&choice);
 
@@ -57,17 +61,53 @@ int main()
             }
 
             case 3:
+            {
+                int x1,y1,x2,y2,x3,y3;
+
+                printf("Enter x1 y1 : ");
+                scanf("%d %d",&x1,&y1);
+
+                printf("Enter x2 y2 : ");
+                scanf("%d %d",&x2,&y2);
+
+                printf("Enter x3 y3 : ");
+                scanf("%d %d",&x3,&y3);
+
+                drawTriangle(
+                    x1,y1,
+                    x2,y2,
+                    x3,y3
+                );
+                break;
+            }
+
+            case 4:
+            {
+                int xc,yc,r;
+
+                printf("Enter center x y : ");
+                scanf("%d %d",&xc, &yc);
+
+                printf("Enter radius : ");
+                scanf("%d",&r);
+
+                drawCircle(xc, yc, r);
+
+                break;
+            }
+
+            case 5:
                 displayCanvas();
                 break;
 
-            case 4:
+            case 6:
             {
                 initializeCanvas();
                 printf("Canvas Cleared\n");
                 break;
             }
 
-            case 5:
+            case 7:
                 return 0;
 
             default:

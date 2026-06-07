@@ -24,7 +24,7 @@ void displayCanvas()
     {
         for(j = 0; j < COLS; j++)
         {
-            printf("%c ", canvas[i][j]);
+            printf("%c", canvas[i][j]);
         }
 
         printf("\n");
