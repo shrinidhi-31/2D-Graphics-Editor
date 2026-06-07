@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "../include/canvas.h"
 #include "../include/line.h"
+#include "../include/rectangle.h"
 
 int main()
 {
@@ -13,8 +14,10 @@ int main()
         printf("\n");
         printf("===== 2D GRAPHICS EDITOR =====\n");
         printf("1. Draw Line\n");
-        printf("2. Display Canvas\n");
-        printf("3. Exit\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Display Canvas\n");
+        printf("4. Clear Canvas\n");
+        printf("5. Exit\n");
         printf("Enter Choice : ");
         scanf("%d",&choice);
 
@@ -36,10 +39,35 @@ int main()
             }
 
             case 2:
+            {
+                int x,y,width,height;
+
+                printf("Enter top-left x y : ");
+                scanf("%d %d", &x, &y);
+
+                printf("Enter width : ");
+                scanf("%d", &width);
+
+                printf("Enter height : ");
+                scanf("%d", &height);
+
+                drawRectangle(x, y, width, height);
+
+                break;
+            }
+
+            case 3:
                 displayCanvas();
                 break;
 
-            case 3:
+            case 4:
+            {
+                initializeCanvas();
+                printf("Canvas Cleared\n");
+                break;
+            }
+
+            case 5:
                 return 0;
 
             default:
