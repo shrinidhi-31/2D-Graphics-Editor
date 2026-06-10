@@ -1,0 +1,81 @@
+AI PROMPT CONVERSATION
+
+Phase 1: Understanding the Project 
+Student: Explain the mini project requirements in simple terms. 
+Assistant: Explained that the project is a menu-driven graphics editor using a 2D character array canvas. The canvas starts with '_' and graphical objects are drawn using '*'. The editor must support line, rectangle, triangle, circle, add, delete, modify, display, and clear operations.
+
+Phase 2: Algorithm Selection 
+Student: I want to use Bresenham's Line Algorithm.
+Assistant: Recommended Bresenham's Line Algorithm for line drawing and Midpoint Circle Algorithm for circle drawing because both are standard computer graphics algorithms and efficient for console graphics.
+
+Phase 3: GitHub Repository Setup 
+Student: Guide me from creating a repository to completing the project. 
+Assistant: Provided step-by-step instructions for creating a GitHub repository, cloning it locally, creating folders, organizing source files, and performing regular commits and pushes. 
+Assistant: Suggested project structure with include/ and src/ folders for modular programming.
+
+Phase 4: Project Structure Design 
+Student: How should I organize the files? 
+Assistant: Recommended separate files for canvas management, line drawing, rectangle drawing, triangle drawing, circle drawing, object management, and the main menu system.
+Assistant: Suggested creation of matching header files for each source module.
+
+Phase 5: Canvas Implementation 
+Student: Generate the canvas code. 
+Assistant: Generated code for initializeCanvas(), clearCanvas(), displayCanvas(), and setPixel() functions using a two-dimensional character array.
+
+Phase 6: Line Drawing 
+Student: Generate Bresenham's Line Algorithm code. 
+Assistant: Provided complete implementation of drawLine() using Bresenham's Line Algorithm and explained coordinate handling and plotting.
+
+Phase 7: Rectangle Drawing 
+Student: Generate rectangle drawing code. 
+Assistant: Implemented rectangles by drawing four lines using the previously developed drawLine() function.
+
+Phase 8: Triangle Drawing
+Student: Generate triangle drawing code. 
+Assistant: Implemented triangles by connecting three user-supplied vertices using line segments.
+
+Phase 9: Circle Drawing 
+Student: Generate circle drawing code. 
+Assistant: Implemented the Midpoint Circle Algorithm using symmetry to efficiently draw circles.
+
+Phase 10: Object Management
+Student: How should objects be stored? 
+Assistant: Designed object storage using global coordinate variables and existence flags such as lineExists, rectExists, triangleExists, and circleExists. 
+Assistant: Introduced redrawScene() to redraw all active objects whenever changes occur.
+
+Phase 11: Delete Object Feature 
+Student: Delete object should remove only the selected object. 
+Assistant: Designed a Delete Object menu allowing deletion of Line, Rectangle, Triangle, or Circle without requesting new coordinates. 
+Assistant: Used existence flags and redrawScene() to update the display.
+
+Phase 12: Modify Object Feature 
+Student: Modify should ask for new coordinates only for the selected shape. 
+Assistant: Generated menu logic for modifying stored coordinates and dimensions for each object type and redrawing the scene.
+
+Phase 13: Clear Canvas Feature 
+Student: Clear canvas should ask for confirmation. 
+Assistant: Implemented a confirmation menu with Yes/No options. If confirmed, all existence flags are reset and the canvas is reinitialized.
+
+Phase 14: Main Menu Integration 
+Student: Provide the complete updated main menu. 
+Assistant: Generated the final menu-driven application integrating Draw, Display, Delete, Modify, Clear Canvas, and Exit operations.
+
+Phase 15: Compilation and Testing 
+Student: Provide compile and run commands. 
+Assistant: Provided GCC commands for compilation and execution. 
+Assistant: Helped verify correct rendering of lines, rectangles, triangles, and circles.
+
+Phase 16: Git and Repository Cleanup 
+Student: How should I prepare the repository for submission? 
+Assistant: Recommended removing editor.exe, creating a .gitignore file, verifying git status, committing final changes, and pushing to GitHub. 
+Assistant: Explained why executable files should not normally be committed.
+
+Phase 17: Documentation 
+Student: Generate README content. 
+Assistant: Provided project overview, features, algorithms used, project structure, and author details. 
+Student: Generate project report content. 
+Assistant: Generated Introduction, Objectives, Problem Statement, Methodology, Features, Advantages, Limitations, Future Enhancements, and Conclusion.
+
+Phase 18: Final Verification and Submission 
+Student: Project submitted successfully. 
+Assistant: Verified that all assignment requirements had been satisfied, including GitHub repository creation, graphics algorithms, object operations, modular code structure, and documentation.
